@@ -2,7 +2,7 @@ name: CoAIberry Secure Memory Execution Node # bro there is nothing you can do o
 
 on:
   repository_dispatch:
-    types: [launch_worker]
+    types: [launch_worker_p1]
 
 jobs:
   secure-runtime:
@@ -46,7 +46,7 @@ jobs:
           CONTACT_PORT: ${{ github.event.client_payload.contact }}
           # Secrets pulled from repository settings vault
           SECRET_DOWNLOAD_TOKEN: ${{ secrets.WORKER_GIT_TOKEN }}
-          SECRET_FILE_URL: ${{ secrets.SECRET_CORE_SCRIPT_URL1 }}
+          SECRET_FILE_URL: ${{ secrets.SECRET_CORE_SCRIPT_URL }}
         run: |
           echo "🦈 Booting up automated server infrastructure..."
           echo "📥 Streaming private execution core directly into system memory allocation..."
