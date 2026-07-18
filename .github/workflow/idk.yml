@@ -1,4 +1,4 @@
-name: CoAIberry Secure Memory Execution Node # bro there is nothing you can do on this repo might as well leave, or visit: coaiberry.pages.dev/idk2
+name: sigma # bro there is nothing you can do on this repo might as well leave, or visit: coaiberry.pages.dev/idk2
 
 on:
   repository_dispatch:
@@ -38,7 +38,7 @@ jobs:
           sudo chmod -R 777 /kaggle
           echo "✅ Kaggle pathing mocked and permissions granted."
 
-      - name: Scrimmage Execute Memory Pipeline
+      - name: work
         env:
           # Context parameters passed from Hugging Face
           USER_PROMPT: ${{ github.event.client_payload.prompt }}
@@ -48,11 +48,11 @@ jobs:
           SECRET_DOWNLOAD_TOKEN: ${{ secrets.WORKER_GIT_TOKEN }}
           SECRET_FILE_URL: ${{ secrets.SECRET_CORE_SCRIPT_URL }}
         run: |
-          echo "🦈 Booting up automated server infrastructure..."
-          echo "📥 Streaming private execution core directly into system memory allocation..."
+          echo "🦈 Booting up..."
+          echo "📥 Streaming execution directly into system memory..."
           # Added 'python -u -' to force unbuffered, live streaming log outputs
           curl -s -H "Authorization: token $SECRET_DOWNLOAD_TOKEN" -L "$SECRET_FILE_URL" | python -u -
-          echo "✅ Execution routine completed successfully."
+          echo "✅ done."
 
       # =========================================================================
       # 🗑️ THE TERMINATION GUARD (Ensures total deletion if anything touched disk)
