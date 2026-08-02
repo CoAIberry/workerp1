@@ -1,8 +1,8 @@
-name: the higher up male
+name: CoAIberry Worker
 
 on:
   repository_dispatch:
-    types: [launch_worker_p2]
+    types: [launch_worker_p1]
 
 jobs:
   run-worker:
